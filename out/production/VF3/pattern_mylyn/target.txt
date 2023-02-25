@@ -1,0 +1,13 @@
+t
+v 0 SET-COLLABORATOR
+v 1 COLLABORATOR
+v 2 ENTITY
+v 3 COLLABORATOR
+e 0 1 call
+e 1 0 declare
+e 2 3 call
+e 1 3 declare
+e 0 3 call
+e 2 0 declare
+e 2 1 call
+1
