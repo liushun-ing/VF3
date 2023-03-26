@@ -1,0 +1,44 @@
+t-0-0
+v 0 MINIMAL_ENTITY
+v 1 FACTORY
+v 2 SET
+v 3 SET
+v 4 FIELD
+e 0 1 call
+e 0 2 declare
+e 0 3 inherit
+e 0 4 call
+1
+t-0-1
+v 0 FACTORY
+v 1 VOID_ACCESSOR
+v 2 INCIDENTAL
+v 3 FACTORY
+v 4 FIELD
+e 0 1 declare
+e 0 2 call
+e 0 3 declare
+e 0 4 call
+1
+t-1-0
+v 0 ENTITY
+v 1 COPY_CONSTRUCTOR
+v 2 ABSTRACT
+v 3 DESTRUCTOR
+v 4 FIELD
+e 0 1 call
+e 0 2 inherit
+e 0 3 implement
+e 0 4 call
+1
+t-1-1
+v 0 DATA_CLASS
+v 1 COMMAND
+v 2 COMMAND
+v 3 COLLABORATOR
+v 4 FIELD
+e 0 1 call
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+1

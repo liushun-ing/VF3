@@ -5,6 +5,7 @@ import graph.Graph;
 import graph.Vertex;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ArrayUtils {
   /**
@@ -107,5 +108,15 @@ public class ArrayUtils {
       }
     }
     return false;
+  }
+
+  public static double getPl(HashMap<String, Integer> target, String label) {
+    double pl = 0.0;
+    for (String l : target.keySet()) {
+      if (LabelUtils.vertexLabelEqual(l, label)) {
+        pl += target.get(l);
+      }
+    }
+    return pl;
   }
 }

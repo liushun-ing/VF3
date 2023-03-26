@@ -21,4 +21,24 @@ public class LabelUtils {
     }
     return edgeLabel;
   }
+
+  /**
+   * 判断两个节点的原型是否相同，只要有相同的就行
+   *
+   * @param label1 标签1
+   * @param label2 标签2
+   * @return 是否相同
+   */
+  public static boolean vertexLabelEqual(String label1, String label2) {
+    String[] s1 = label1.split("-");
+    String[] s2 = label2.split("-");
+    for (String s : s1) {
+      for (String value : s2) {
+        if (s.equals(value)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
 }

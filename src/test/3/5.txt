@@ -1,0 +1,44 @@
+t-0-0
+v 0 DATA_CLASS
+v 1 PROPERTY
+v 2 COMMAND
+v 3 VOID_ACCESSOR
+v 4 FIELD
+e 0 1 declare
+e 0 2 inherit
+e 0 3 call
+e 0 4 declare
+1
+t-0-1
+v 0 FACTORY
+v 1 COLLABORATOR
+v 2 LOCAL_CONTROLLER
+v 3 COMMAND
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+1
+t-1-0
+v 0 PURE_CONTROLLER
+v 1 CONSTRUCTOR
+v 2 FACTORY
+v 3 NON_VOID_COMMAND
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 call
+1
+t-1-1
+v 0 PURE_CONTROLLER
+v 1 NON_VOID_COMMAND
+v 2 SET
+v 3 COLLABORATOR
+v 4 FIELD
+e 0 1 inherit
+e 0 2 implement
+e 0 3 call
+e 0 4 call
+1

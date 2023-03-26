@@ -14,6 +14,10 @@ import java.util.ArrayList;
 
 /** BuildGraph 图的构造类，读取文件，构造图结构 */
 public class BuildGraph {
+  /**
+   * 模式图集合，声明为static,防止多次构建，减少损耗
+   */
+  public static ArrayList<Graph> PATTERN_GRAPHS = new ArrayList<>();
 
   /**
    * 读取文件，构造模式图集合
@@ -21,10 +25,12 @@ public class BuildGraph {
    * @return 模式图集合
    */
   public ArrayList<Graph> buildPatternGraphs() {
-    ArrayList<Graph> patternGraphs = new ArrayList<>();
+    if (!PATTERN_GRAPHS.isEmpty()) {
+      return PATTERN_GRAPHS;
+    }
     InputStream is = this.getClass().getResourceAsStream("/pattern_mylyn/pattern_mylyn.txt");
     if (is == null) {
-      return patternGraphs;
+      return PATTERN_GRAPHS;
     }
     BufferedReader pattern = new BufferedReader(new InputStreamReader(is));
     String lineStr;
@@ -60,14 +66,14 @@ public class BuildGraph {
             }
           }
           Graph graph = new Graph(vertices, edges);
-          patternGraphs.add(graph);
+          PATTERN_GRAPHS.add(graph);
         }
       }
       pattern.close();
     } catch (IOException e1) {
       e1.printStackTrace();
     }
-    return patternGraphs;
+    return PATTERN_GRAPHS;
   }
 
   /**
@@ -75,11 +81,11 @@ public class BuildGraph {
    *
    * @return 目标图
    */
-  public Graph buildTargetGraph() {
-    Graph graph = new Graph();
-    InputStream is = this.getClass().getResourceAsStream("/pattern_mylyn/target.txt");
+  public ArrayList<Graph> buildTargetGraph(int p, int s) {
+    ArrayList<Graph> graphs = new ArrayList<>();
+    InputStream is = this.getClass().getResourceAsStream("/test/" + p + "/" + s + ".txt");
     if (is == null) {
-      return graph;
+      return graphs;
     }
     BufferedReader target = new BufferedReader(new InputStreamReader(is));
     String lineStr;
@@ -114,13 +120,13 @@ public class BuildGraph {
               }
             }
           }
-          graph = new Graph(vertices, edges);
+          graphs.add(new Graph(vertices, edges));
         }
       }
       target.close();
     } catch (IOException e1) {
       e1.printStackTrace();
     }
-    return graph;
+    return graphs;
   }
 }

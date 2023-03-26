@@ -1,0 +1,44 @@
+t-0-0
+v 0 BOUNDARY
+v 1 COLLABORATOR
+v 2 COLLABORATOR
+v 3 PROPERTY
+v 4 FIELD
+e 0 1 inherit
+e 0 2 call
+e 0 3 declare
+e 0 4 declare
+1
+t-0-1
+v 0 COMMANDER
+v 1 NON_VOID_COMMAND
+v 2 SET
+v 3 DESTRUCTOR
+v 4 FIELD
+e 0 1 call
+e 0 2 call
+e 0 3 inherit
+e 0 4 declare
+1
+t-1-0
+v 0 BOUNDARY
+v 1 SET
+v 2 COLLABORATOR
+v 3 SET
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 inherit
+e 0 4 declare
+1
+t-1-1
+v 0 FACTORY
+v 1 INCIDENTAL
+v 2 SET
+v 3 COMMAND
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 implement
+e 0 4 inherit
+1

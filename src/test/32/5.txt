@@ -1,0 +1,44 @@
+t-0-0
+v 0 BOUNDARY
+v 1 COLLABORATOR
+v 2 COPY_CONSTRUCTOR
+v 3 NON_VOID_COMMAND
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+1
+t-0-1
+v 0 DATA_PROVIDER
+v 1 GET
+v 2 FACTORY
+v 3 COLLABORATOR
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 call
+e 0 4 declare
+1
+t-1-0
+v 0 DATA_CLASS
+v 1 CONSTRUCTOR
+v 2 ABSTRACT
+v 3 VOID_ACCESSOR
+v 4 FIELD
+e 0 1 declare
+e 0 2 declare
+e 0 3 call
+e 0 4 declare
+1
+t-1-1
+v 0 FACTORY
+v 1 COMMAND
+v 2 PROPERTY
+v 3 CONSTRUCTOR
+v 4 FIELD
+e 0 1 declare
+e 0 2 inherit
+e 0 3 declare
+e 0 4 declare
+1
