@@ -10,10 +10,10 @@ import java.util.ArrayList;
 public class Task {
   public static void main(String[] args) {
     MainEntry mainEntry = new MainEntry();
-    System.out.println(mainEntry.getPatternGraphs().get(0));
-    ArrayList<Graph> targetGraph = new BuildGraph().buildTargetGraph(1, 40);
+    System.out.println(mainEntry.getPatternGraphs().get(1));
+    ArrayList<Graph> targetGraph = new BuildGraph().buildTargetGraph(2, 40);
     for (Graph g : targetGraph) {
-      ArrayList<ArrayList<Solution>> executeResult = mainEntry.executeById(g, 0);
+      ArrayList<ArrayList<Solution>> executeResult = mainEntry.executeById(g, 1);
       System.out.println(executeResult);
     }
   }

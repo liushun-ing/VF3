@@ -41,7 +41,7 @@ e 8 4 inherit
 e 5 9 call
 1
 t-1-0
-v 0 INTERFACE
+v 0 ENTITY
 v 1 EMPTY
 v 2 PROPERTY
 v 3 LOCAL_CONTROLLER
@@ -54,7 +54,7 @@ v 9 GET
 e 0 1 declare
 e 0 2 call
 e 0 3 declare
-e 0 4 declare
+e 0 4 call
 e 0 5 inherit
 e 0 6 declare
 e 7 3 implement
@@ -65,11 +65,11 @@ t-1-1
 v 0 DATA_PROVIDER
 v 1 SET
 v 2 INCIDENTAL
-v 3 LOCAL_CONTROLLER
+v 3 COLLABORATOR
 v 4 EMPTY
 v 5 COLLABORATOR
 v 6 FIELD
-v 7 DATA_CLASS
+v 7 ENTITY
 v 8 BOUNDARY
 v 9 SET
 e 0 1 declare
@@ -78,7 +78,7 @@ e 0 3 call
 e 0 4 call
 e 0 5 declare
 e 0 6 declare
-e 7 3 inherit
+e 7 3 call
 e 8 4 declare
 e 5 9 call
 1
@@ -87,11 +87,11 @@ v 0 BOUNDARY
 v 1 DESTRUCTOR
 v 2 EMPTY
 v 3 GET
-v 4 VOID_ACCESSOR
-v 5 ABSTRACT
+v 4 COLLABORATOR
+v 5 ENTITY
 v 6 FIELD
 v 7 LARGE_CLASS
-v 8 BOUNDARY
+v 8 ENTITY
 v 9 COLLABORATOR
 e 0 1 declare
 e 0 2 call
@@ -100,11 +100,11 @@ e 0 4 call
 e 0 5 declare
 e 0 6 declare
 e 7 3 call
-e 8 4 declare
+e 8 4 call
 e 5 9 call
 1
 t-2-1
-v 0 BOUNDARY
+v 0 ENTITY
 v 1 INCIDENTAL
 v 2 ABSTRACT
 v 3 SET
@@ -112,12 +112,12 @@ v 4 COLLABORATOR
 v 5 COPY_CONSTRUCTOR
 v 6 FIELD
 v 7 LAZY_CLASS
-v 8 LAZY_CLASS
+v 8 ENTITY
 v 9 SET
 e 0 1 declare
 e 0 2 call
 e 0 3 call
-e 0 4 declare
+e 0 4 call
 e 0 5 call
 e 0 6 declare
 e 7 3 declare
