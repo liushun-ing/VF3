@@ -30,15 +30,16 @@ public class LabelUtils {
    * @return 是否相同
    */
   public static boolean vertexLabelEqual(String label1, String label2) {
-    String[] s1 = label1.split("-");
-    String[] s2 = label2.split("-");
-    for (String s : s1) {
-      for (String value : s2) {
-        if (s.equals(value)) {
-          return true;
-        }
-      }
-    }
-    return false;
+//    String[] s1 = label1.split("-");
+//    String[] s2 = label2.split("-");
+//    for (String s : s1) {
+//      for (String value : s2) {
+//        if (s.equals(value)) {
+//          return true;
+//        }
+//      }
+//    }
+//    return false;
+    return label1.equals(label2);
   }
 }

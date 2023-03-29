@@ -36,7 +36,7 @@ v 0 DEGENERATE
 v 1 EMPTY
 v 2 COLLABORATOR
 v 3 PROPERTY
-v 4 SET
+v 4 SET-COLLABORATOR
 e 0 1 call
 e 4 2 call
 e 0 3 inherit

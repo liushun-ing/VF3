@@ -32,10 +32,10 @@ e 0 3 declare
 e 0 4 call
 1
 t-1-1
-v 0 COMMANDER
+v 0 BOUNDARY-COMMANDER
 v 1 NON_VOID_COMMAND
 v 2 SET
-v 3 COLLABORATOR
+v 3 COMMAND-COLLABORATOR
 v 4 FIELD
 e 0 1 inherit
 e 0 2 implement

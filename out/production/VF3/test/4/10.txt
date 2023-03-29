@@ -67,7 +67,7 @@ v 1 PREDICATE
 v 2 SET
 v 3 COMMAND
 v 4 COLLABORATOR
-v 5 INCIDENTAL
+v 5 BOUNDARY
 v 6 FIELD
 v 7 FACTORY
 v 8 ENTITY
@@ -80,7 +80,7 @@ e 0 5 declare
 e 0 6 declare
 e 7 3 declare
 e 8 4 declare
-e 5 9 call
+e 5 9 declare
 1
 t-2-0
 v 0 POOL
@@ -90,7 +90,7 @@ v 3 COLLABORATOR
 v 4 COLLABORATOR
 v 5 SET
 v 6 FIELD
-v 7 COMMANDER
+v 7 BOUNDARY
 v 8 BOUNDARY
 v 9 SET
 e 0 1 declare
@@ -100,26 +100,26 @@ e 0 4 declare
 e 0 5 call
 e 0 6 declare
 e 7 3 declare
-e 8 4 call
+e 8 4 declare
 e 5 9 call
 1
 t-2-1
 v 0 FACTORY
-v 1 COLLABORATOR
+v 1 BOUNDARY
 v 2 COLLABORATOR
 v 3 PREDICATE
 v 4 COMMAND
 v 5 GET
-v 6 FIELD
+v 6 COLLABORATOR
 v 7 MINIMAL_ENTITY
 v 8 COMMANDER
 v 9 INCIDENTAL
 e 0 1 implement
-e 0 2 declare
+e 1 2 declare
 e 0 3 declare
-e 0 4 declare
+e 3 4 declare
 e 0 5 declare
-e 0 6 declare
+e 1 6 declare
 e 7 3 inherit
 e 8 4 implement
 e 5 9 call
