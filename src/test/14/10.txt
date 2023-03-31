@@ -2,7 +2,7 @@ t-0-0
 v 0 ENTITY
 v 1 FACTORY
 v 2 FACTORY
-v 3 COLLABORATOR
+v 3 COMMAND-COLLABORATOR
 v 4 COMMAND
 v 5 ABSTRACT
 v 6 FIELD
@@ -23,11 +23,11 @@ t-0-1
 v 0 FACTORY
 v 1 PREDICATE
 v 2 COLLABORATOR
-v 3 COLLABORATOR
+v 3 COMMAND-COLLABORATOR
 v 4 SET
 v 5 VOID_ACCESSOR
 v 6 FIELD
-v 7 CONTROLLER
+v 7 COMMAND-COLLABORATOR
 v 8 BOUNDARY
 v 9 COLLABORATOR
 e 0 1 declare
@@ -43,10 +43,10 @@ e 5 9 call
 t-1-0
 v 0 BOUNDARY
 v 1 PREDICATE
-v 2 INCIDENTAL
+v 2 ENTITY
 v 3 ABSTRACT
 v 4 DESTRUCTOR
-v 5 COLLABORATOR
+v 5 COMMAND-COLLABORATOR
 v 6 FIELD
 v 7 LARGE_CLASS
 v 8 ENTITY
@@ -55,7 +55,7 @@ e 0 1 call
 e 0 2 declare
 e 0 3 call
 e 0 4 call
-e 0 5 inherit
+e 2 5 declare
 e 0 6 declare
 e 7 3 call
 e 8 4 call
@@ -65,11 +65,11 @@ t-1-1
 v 0 LAZY_CLASS
 v 1 DESTRUCTOR
 v 2 ABSTRACT
-v 3 EMPTY
+v 3 COMMAND-COLLABORATOR
 v 4 PREDICATE
 v 5 PREDICATE
 v 6 FIELD
-v 7 BOUNDARY
+v 7 ENTITY
 v 8 FACTORY
 v 9 CONSTRUCTOR
 e 0 1 declare
@@ -84,43 +84,43 @@ e 5 9 call
 1
 t-2-0
 v 0 FACTORY
-v 1 COLLABORATOR
+v 1 COMMAND-COLLABORATOR
 v 2 PREDICATE
-v 3 COLLABORATOR
-v 4 PROPERTY
+v 3 COMMAND-COLLABORATOR
+v 4 ENTITY
 v 5 NON_VOID_COMMAND
 v 6 FIELD
 v 7 DATA_PROVIDER
 v 8 INTERFACE
-v 9 COMMAND
+v 9 COMMAND-COLLABORATOR
 e 0 1 declare
 e 0 2 declare
-e 0 3 declare
+e 4 3 declare
 e 0 4 declare
 e 0 5 declare
 e 0 6 declare
 e 7 3 implement
 e 8 4 inherit
-e 5 9 call
+e 4 9 declare
 1
 t-2-1
 v 0 ENTITY
 v 1 LOCAL_CONTROLLER
-v 2 COLLABORATOR
+v 2 COMMAND-COLLABORATOR
 v 3 DESTRUCTOR
 v 4 INCIDENTAL
 v 5 COLLABORATOR
 v 6 FIELD
-v 7 BOUNDARY
+v 7 ENTITY
 v 8 POOL
 v 9 FACTORY
 e 0 1 implement
 e 0 2 declare
-e 0 3 call
+e 2 3 call
 e 0 4 declare
 e 0 5 implement
 e 0 6 declare
-e 7 3 declare
+e 7 2 declare
 e 8 4 declare
 e 5 9 call
 1
