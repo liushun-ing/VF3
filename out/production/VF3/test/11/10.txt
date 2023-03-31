@@ -4,7 +4,7 @@ v 1 FACTORY
 v 2 NON_VOID_COMMAND
 v 3 FACTORY
 v 4 ABSTRACT
-v 5 EMPTY
+v 5 COMMAND-COLLABORATOR
 v 6 FIELD
 v 7 BOUNDARY
 v 8 INTERFACE
@@ -17,19 +17,19 @@ e 0 5 call
 e 0 6 declare
 e 7 3 declare
 e 8 4 inherit
-e 5 9 call
+e 5 9 declare
 1
 t-0-1
-v 0 FACTORY
+v 0 COMMAND-COLLABORATOR
 v 1 CONSTRUCTOR
 v 2 CONTROLLER
-v 3 VOID_ACCESSOR
+v 3 COMMAND-COLLABORATOR
 v 4 COLLABORATOR
-v 5 COMMAND
+v 5 COMMAND-COLLABORATOR
 v 6 FIELD
 v 7 MINIMAL_ENTITY
 v 8 ENTITY
-v 9 COLLABORATOR
+v 9 COMMAND-COLLABORATOR
 e 0 1 inherit
 e 0 2 declare
 e 0 3 declare
@@ -48,16 +48,16 @@ v 3 DESTRUCTOR
 v 4 LOCAL_CONTROLLER
 v 5 SET
 v 6 FIELD
-v 7 DEGENERATE
+v 7 COMMAND-COLLABORATOR
 v 8 ENTITY
 v 9 ABSTRACT
 e 0 1 declare
-e 0 2 inherit
-e 0 3 declare
+e 1 2 inherit
+e 1 3 declare
 e 0 4 call
 e 0 5 declare
 e 0 6 declare
-e 7 3 call
+e 7 1 call
 e 8 4 declare
 e 5 9 call
 1
@@ -65,52 +65,53 @@ t-1-1
 v 0 CONTROLLER
 v 1 ABSTRACT
 v 2 FACTORY
-v 3 COPY_CONSTRUCTOR
-v 4 CONSTRUCTOR
+v 3 COMMAND-COLLABORATOR
+v 4 COLLABORATOR
 v 5 COLLABORATOR
-v 6 FIELD
+v 6 COLLABORATOR
 v 7 COMMANDER
 v 8 FACTORY
 v 9 COMMAND
 e 0 1 implement
 e 0 2 call
 e 0 3 declare
-e 0 4 inherit
+e 4 3 call
+e 3 4 call
 e 0 5 declare
-e 0 6 declare
+e 3 6 call
 e 7 3 declare
 e 8 4 call
 e 5 9 call
 1
 t-2-0
 v 0 BOUNDARY
-v 1 COMMAND
+v 1 COMMAND-COLLABORATOR
 v 2 COMMAND
 v 3 SET
 v 4 INCIDENTAL
-v 5 LOCAL_CONTROLLER
+v 5 COLLABORATOR
 v 6 FIELD
-v 7 COMMANDER
-v 8 LAZY_CLASS
+v 7 COMMAND-COLLABORATOR
+v 8 COLLABORATOR
 v 9 FACTORY
 e 0 1 declare
 e 0 2 declare
 e 0 3 declare
 e 0 4 call
-e 0 5 declare
+e 1 5 call
 e 0 6 declare
-e 7 3 declare
+e 7 8 call
 e 8 4 call
 e 5 9 call
 1
 t-2-1
-v 0 ENTITY
+v 0 COMMAND-COLLABORATOR
 v 1 CONSTRUCTOR
-v 2 EMPTY
+v 2 COLLABORATOR
 v 3 INCIDENTAL
 v 4 SET
 v 5 GET
-v 6 FIELD
+v 6 COLLABORATOR
 v 7 ENTITY
 v 8 LAZY_CLASS
 v 9 ABSTRACT
@@ -119,7 +120,7 @@ e 0 2 call
 e 0 3 implement
 e 0 4 implement
 e 0 5 declare
-e 0 6 declare
+e 0 6 call
 e 7 3 declare
 e 8 4 inherit
 e 5 9 call

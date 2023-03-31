@@ -1,5 +1,5 @@
 t-0-0
-v 0 CONTROLLER
+v 0 COMMAND-COLLABORATOR
 v 1 COMMAND
 v 2 COMMAND
 v 3 COLLABORATOR
@@ -7,6 +7,7 @@ v 4 FIELD
 e 0 1 declare
 e 0 2 call
 e 0 3 call
+e 3 0 call
 e 0 4 inherit
 1
 t-0-1
@@ -21,7 +22,7 @@ e 0 3 declare
 e 0 4 call
 1
 t-1-0
-v 0 PURE_CONTROLLER
+v 0 COMMAND-COLLABORATOR
 v 1 PREDICATE
 v 2 LOCAL_CONTROLLER
 v 3 COLLABORATOR
@@ -32,7 +33,7 @@ e 0 3 call
 e 0 4 declare
 1
 t-1-1
-v 0 MINIMAL_ENTITY
+v 0 COMMAND-COLLABORATOR
 v 1 SET
 v 2 COLLABORATOR
 v 3 INCIDENTAL
