@@ -23,7 +23,7 @@ e 0 4 declare
 t-1-0
 v 0 BOUNDARY
 v 1 COPY_CONSTRUCTOR
-v 2 PREDICATE
+v 2 SET-COLLABORATOR
 v 3 DESTRUCTOR
 v 4 FIELD
 e 0 1 declare
@@ -34,11 +34,11 @@ e 0 4 implement
 t-1-1
 v 0 COMMANDER
 v 1 FACTORY
-v 2 CONTROLLER
-v 3 PREDICATE
+v 2 BOUNDARY
+v 3 SET-COLLABORATOR
 v 4 FIELD
 e 0 1 call
 e 0 2 declare
-e 0 3 call
+e 2 3 declare
 e 0 4 declare
 1
