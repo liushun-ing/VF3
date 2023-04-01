@@ -46,7 +46,7 @@ v 1 EMPTY
 v 2 COMMAND
 v 3 COLLABORATOR
 v 4 INCIDENTAL
-v 5 SET
+v 5 COLLABORATOR
 v 6 FIELD
 v 7 BOUNDARY
 v 8 BOUNDARY
@@ -63,11 +63,11 @@ e 5 9 call
 1
 t-1-1
 v 0 COMMANDER
-v 1 VOID_ACCESSOR
+v 1 COLLABORATOR
 v 2 INCIDENTAL
 v 3 SET
 v 4 DESTRUCTOR
-v 5 INCIDENTAL
+v 5 COLLABORATOR
 v 6 FIELD
 v 7 POOL
 v 8 BOUNDARY
@@ -79,35 +79,37 @@ e 0 4 call
 e 0 5 call
 e 0 6 declare
 e 7 3 inherit
-e 8 4 inherit
+e 8 5 declare
+e 8 1 declare
 e 5 9 call
 1
 t-2-0
 v 0 BOUNDARY
 v 1 SET
 v 2 GET
-v 3 INCIDENTAL
-v 4 INCIDENTAL
+v 3 COLLABORATOR
+v 4 COLLABORATOR
 v 5 EMPTY
 v 6 FIELD
 v 7 DATA_PROVIDER
-v 8 COMMANDER
+v 8 BOUNDARY
 v 9 COLLABORATOR
 e 0 1 declare
-e 0 2 declare
-e 0 3 implement
-e 0 4 inherit
+e 0 2 call
+e 0 3 declare
+e 0 4 declare
 e 0 5 declare
-e 0 6 declare
+e 0 6 call
 e 7 3 declare
 e 8 4 declare
+e 8 9 declare
 e 5 9 call
 1
 t-2-1
-v 0 MINIMAL_ENTITY
+v 0 BOUNDARY
 v 1 CONSTRUCTOR
 v 2 INCIDENTAL
-v 3 ABSTRACT
+v 3 COLLABORATOR
 v 4 EMPTY
 v 5 EMPTY
 v 6 FIELD
@@ -116,11 +118,12 @@ v 8 BOUNDARY
 v 9 COLLABORATOR
 e 0 1 declare
 e 0 2 inherit
-e 0 3 inherit
+e 0 3 declare
+e 0 9 declare
 e 0 4 declare
 e 0 5 declare
 e 0 6 declare
 e 7 3 declare
-e 8 4 call
-e 5 9 call
+e 8 3 declare
+e 8 9 declare
 1
