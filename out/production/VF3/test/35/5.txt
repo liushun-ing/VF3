@@ -21,21 +21,21 @@ e 0 3 declare
 e 0 4 implement
 1
 t-1-0
-v 0 LARGE_CLASS
+v 0 OTHER
 v 1 NON_VOID_COMMAND
 v 2 LOCAL_CONTROLLER
-v 3 VOID_ACCESSOR
+v 3 COMMAND-COLLABORATOR
 v 4 FIELD
 e 0 1 declare
-e 0 2 declare
-e 0 3 implement
-e 0 4 inherit
+e 0 2 call
+e 0 3 declare
+e 0 4 declare
 1
 t-1-1
-v 0 FACTORY
-v 1 CONTROLLER
-v 2 COLLABORATOR
-v 3 SET
+v 0 OTHER
+v 1 FIELD
+v 2 COMMAND-COLLABORATOR
+v 3 FIELD
 v 4 FIELD
 e 0 1 call
 e 0 2 declare

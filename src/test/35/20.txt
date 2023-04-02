@@ -81,7 +81,7 @@ e 16 18 call
 e 16 19 call
 1
 t-1-0
-v 0 BOUNDARY
+v 0 OTHER
 v 1 COPY_CONSTRUCTOR
 v 2 COLLABORATOR
 v 3 COLLABORATOR
@@ -90,7 +90,7 @@ v 5 COLLABORATOR
 v 6 COMMAND
 v 7 INCIDENTAL
 v 8 FIELD
-v 9 FIELD
+v 9 COMMAND-COLLABORATOR
 v 10 BOUNDARY
 v 11 PURE_CONTROLLER
 v 12 LARGE_CLASS
@@ -122,12 +122,12 @@ e 16 18 call
 e 16 19 call
 1
 t-1-1
-v 0 BOUNDARY
-v 1 COLLABORATOR
+v 0 OTHER
+v 1 OTHER
 v 2 VOID_ACCESSOR
 v 3 COLLABORATOR
 v 4 ABSTRACT
-v 5 COLLABORATOR
+v 5 COMMAND-COLLABORATOR
 v 6 FACTORY
 v 7 COLLABORATOR
 v 8 FIELD
@@ -146,11 +146,11 @@ e 0 1 call
 e 0 2 call
 e 0 3 call
 e 0 4 call
-e 0 5 call
+e 1 5 declare
 e 0 6 declare
 e 0 7 inherit
 e 0 8 declare
-e 0 9 declare
+e 1 9 declare
 e 10 2 call
 e 11 4 declare
 e 12 4 declare
@@ -163,7 +163,7 @@ e 16 18 call
 e 16 19 call
 1
 t-2-0
-v 0 ENTITY
+v 0 OTHER
 v 1 PREDICATE
 v 2 COLLABORATOR
 v 3 EMPTY
@@ -179,7 +179,7 @@ v 12 BOUNDARY
 v 13 FACTORY
 v 14 EMPTY
 v 15 COLLABORATOR
-v 16 COLLABORATOR
+v 16 COMMAND-COLLABORATOR
 v 17 DEGENERATE
 v 18 COLLABORATOR
 v 19 COMMAND
@@ -198,28 +198,28 @@ e 12 4 declare
 e 5 13 call
 e 5 14 call
 e 6 15 call
-e 6 16 call
+e 0 16 declare
 e 17 15 declare
 e 16 18 call
 e 16 19 call
 1
 t-2-1
-v 0 COMMANDER
+v 0 OTHER
 v 1 COLLABORATOR
 v 2 FACTORY
-v 3 EMPTY
-v 4 COLLABORATOR
+v 3 FIELD
+v 4 COMMAND-COLLABORATOR
 v 5 EMPTY
-v 6 COLLABORATOR
+v 6 OTHER
 v 7 COMMAND
-v 8 FIELD
+v 8 COMMAND-COLLABORATOR
 v 9 FIELD
 v 10 COMMANDER
 v 11 BOUNDARY
 v 12 FACTORY
 v 13 COLLABORATOR
 v 14 DESTRUCTOR
-v 15 COLLABORATOR
+v 15 FIELD
 v 16 COLLABORATOR
 v 17 DATA_PROVIDER
 v 18 EMPTY
@@ -231,14 +231,14 @@ e 0 4 declare
 e 0 5 declare
 e 0 6 declare
 e 0 7 implement
-e 0 8 declare
-e 0 9 declare
+e 6 8 declare
+e 2 9 declare
 e 10 2 declare
 e 11 4 declare
 e 12 4 declare
 e 5 13 call
 e 5 14 call
-e 6 15 call
+e 6 15 declare
 e 6 16 call
 e 17 15 implement
 e 16 18 call
@@ -247,28 +247,28 @@ e 16 19 call
 t-4-0
 v 0 BOUNDARY
 v 1 COPY_CONSTRUCTOR
-v 2 INCIDENTAL
+v 2 FIELD
 v 3 PREDICATE
-v 4 CONTROLLER
+v 4 FIELD
 v 5 SET
 v 6 COLLABORATOR
-v 7 ABSTRACT
+v 7 OTHER
 v 8 FIELD
 v 9 FIELD
-v 10 BOUNDARY
+v 10 OTHER
 v 11 DEGENERATE
 v 12 BOUNDARY
 v 13 COMMAND
-v 14 LOCAL_CONTROLLER
-v 15 COLLABORATOR
+v 14 COMMAND-COLLABORATOR
+v 15 COMMAND-COLLABORATOR
 v 16 GET
-v 17 CONTROLLER
-v 18 COLLABORATOR
+v 17 COLLABORATOR
+v 18 COMMAND-COLLABORATOR
 v 19 FACTORY
 e 0 1 call
 e 0 2 inherit
 e 0 3 call
-e 0 4 declare
+e 7 4 declare
 e 0 5 declare
 e 0 6 declare
 e 0 7 inherit
@@ -278,36 +278,38 @@ e 10 2 declare
 e 11 4 declare
 e 12 4 declare
 e 5 13 call
-e 5 14 call
-e 6 15 call
+e 7 14 declare
+e 10 14 declare
+e 7 15 declare
 e 6 16 call
-e 17 15 declare
-e 16 18 call
+e 18 15 declare
+e 7 17 declare
+e 10 18 declare
 e 16 19 call
 1
 t-4-1
-v 0 ENTITY
+v 0 OTHER
 v 1 COLLABORATOR
-v 2 GET
+v 2 FIELD
 v 3 COMMAND
 v 4 COMMAND
 v 5 SET
-v 6 COPY_CONSTRUCTOR
+v 6 COMMAND-COLLABORATOR
 v 7 NON_VOID_COMMAND
 v 8 FIELD
 v 9 FIELD
-v 10 BOUNDARY
-v 11 INTERFACE
+v 10 OTHER
+v 11 OTHER
 v 12 BOUNDARY
 v 13 COLLABORATOR
-v 14 SET
+v 14 COMMAND-COLLABORATOR
 v 15 GET
 v 16 COPY_CONSTRUCTOR
 v 17 COMMANDER
 v 18 NON_VOID_COMMAND
 v 19 COLLABORATOR
 e 0 1 declare
-e 0 2 declare
+e 1 2 declare
 e 0 3 call
 e 0 4 inherit
 e 0 5 declare
@@ -316,10 +318,11 @@ e 0 7 declare
 e 0 8 declare
 e 0 9 declare
 e 10 2 declare
-e 11 4 call
+e 11 2 declare
 e 12 4 declare
 e 5 13 call
-e 5 14 call
+e 10 14 declare
+e 11 14 declare
 e 6 15 call
 e 6 16 call
 e 17 15 declare
