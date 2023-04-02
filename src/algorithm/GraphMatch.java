@@ -46,7 +46,35 @@ public class GraphMatch {
     }
     ArrayList<MatchCouple> s0 = new ArrayList<>();
     int result = match(s0, patternGraph, targetGraph);
+    descentResult();
     return Solutions;
+  }
+
+  /**
+   * 对结果进行去重
+   */
+  public static void descentResult() {
+    for (int i = 0; i < Solutions.size(); i++) {
+      Solution si = Solutions.get(i);
+      for (int j = 0; j < i; j++) {
+        Solution sj = Solutions.get(j);
+        ArrayList<Integer> siId = new ArrayList<>();
+        for (MatchCouple mc : si.getSolution()) {
+          siId.add(mc.getV().getId());
+        }
+        siId.sort(null);
+        ArrayList<Integer> sjId = new ArrayList<>();
+        for (MatchCouple mc : sj.getSolution()) {
+          sjId.add(mc.getV().getId());
+        }
+        sjId.sort(null);
+        if (siId.toString().equals(sjId.toString())) {
+          Solutions.remove(i);
+          i--;
+          break;
+        }
+      }
+    }
   }
 
   /**
