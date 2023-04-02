@@ -83,7 +83,7 @@ e 16 19 call
 t-1-0
 v 0 BOUNDARY
 v 1 CONTROLLER
-v 2 DESTRUCTOR
+v 2 COLLABORATOR
 v 3 COLLABORATOR
 v 4 DESTRUCTOR
 v 5 VOID_ACCESSOR
@@ -91,7 +91,7 @@ v 6 PROPERTY
 v 7 COMMAND
 v 8 FIELD
 v 9 FIELD
-v 10 BOUNDARY
+v 10 BOUNDARY-COMMANDER
 v 11 ENTITY
 v 12 PURE_CONTROLLER
 v 13 SET
@@ -114,7 +114,7 @@ e 10 2 declare
 e 11 4 implement
 e 12 4 call
 e 5 13 call
-e 5 14 call
+e 2 14 call
 e 6 15 call
 e 6 16 call
 e 17 15 declare
@@ -134,7 +134,7 @@ v 8 FIELD
 v 9 FIELD
 v 10 DATA_PROVIDER
 v 11 INTERFACE
-v 12 BOUNDARY
+v 12 BOUNDARY-COMMANDER
 v 13 COPY_CONSTRUCTOR
 v 14 COLLABORATOR
 v 15 EMPTY
@@ -153,7 +153,7 @@ e 0 8 declare
 e 0 9 declare
 e 10 2 implement
 e 11 4 implement
-e 12 4 declare
+e 12 5 declare
 e 5 13 call
 e 5 14 call
 e 6 15 call
@@ -163,7 +163,7 @@ e 16 18 call
 e 16 19 call
 1
 t-2-0
-v 0 BOUNDARY
+v 0 BOUNDARY-COMMANDER
 v 1 EMPTY
 v 2 COLLABORATOR
 v 3 NON_VOID_COMMAND
@@ -174,7 +174,7 @@ v 7 LOCAL_CONTROLLER
 v 8 FIELD
 v 9 FIELD
 v 10 MINIMAL_ENTITY
-v 11 BOUNDARY
+v 11 BOUNDARY-COMMANDER
 v 12 FACTORY
 v 13 GET
 v 14 COLLABORATOR
@@ -193,21 +193,21 @@ e 0 7 call
 e 0 8 declare
 e 0 9 declare
 e 10 2 declare
-e 11 4 implement
+e 11 14 declare
 e 12 4 declare
 e 5 13 call
 e 5 14 call
-e 6 15 call
+e 2 15 call
 e 6 16 call
 e 17 15 declare
-e 16 18 call
+e 14 18 call
 e 16 19 call
 1
 t-2-1
 v 0 FACTORY
 v 1 COMMAND
 v 2 COMMAND
-v 3 PREDICATE
+v 3 BOUNDARY-COMMANDER
 v 4 PREDICATE
 v 5 CONSTRUCTOR
 v 6 GET
@@ -216,7 +216,7 @@ v 8 FIELD
 v 9 FIELD
 v 10 DATA_CLASS
 v 11 BOUNDARY
-v 12 COMMANDER
+v 12 COLLABORATOR
 v 13 VOID_ACCESSOR
 v 14 VOID_ACCESSOR
 v 15 COLLABORATOR
@@ -235,25 +235,25 @@ e 0 8 declare
 e 0 9 declare
 e 10 2 declare
 e 11 4 call
-e 12 4 declare
+e 3 12 declare
 e 5 13 call
 e 5 14 call
 e 6 15 call
 e 6 16 call
 e 17 15 call
-e 16 18 call
-e 16 19 call
+e 12 18 call
+e 12 19 call
 1
 t-4-0
 v 0 DEGENERATE
-v 1 LOCAL_CONTROLLER
+v 1 BOUNDARY-COMMANDER
 v 2 COMMAND
 v 3 SET
 v 4 GET
-v 5 COMMAND
-v 6 FACTORY
+v 5 COLLABORATOR
+v 6 COLLABORATOR
 v 7 FACTORY
-v 8 FIELD
+v 8 COLLABORATOR
 v 9 FIELD
 v 10 POOL
 v 11 BOUNDARY
@@ -262,27 +262,29 @@ v 13 INCIDENTAL
 v 14 LOCAL_CONTROLLER
 v 15 COLLABORATOR
 v 16 FACTORY
-v 17 POOL
-v 18 SET
+v 17 BOUNDARY-COMMANDER
+v 18 COLLABORATOR
 v 19 COPY_CONSTRUCTOR
 e 0 1 declare
 e 0 2 declare
 e 0 3 call
 e 0 4 call
-e 0 5 declare
-e 0 6 call
+e 1 5 declare
+e 5 6 call
+e 1 6 declare
 e 0 7 declare
-e 0 8 declare
+e 5 8 call
 e 0 9 declare
 e 10 2 inherit
 e 11 4 implement
 e 12 4 declare
 e 5 13 call
 e 5 14 call
+e 5 15 call
 e 6 15 call
 e 6 16 call
-e 17 15 call
-e 16 18 call
+e 17 15 declare
+e 15 18 call
 e 16 19 call
 1
 t-4-1
@@ -290,39 +292,40 @@ v 0 BOUNDARY
 v 1 DESTRUCTOR
 v 2 CONSTRUCTOR
 v 3 SET
-v 4 PROPERTY
+v 4 BOUNDARY-COMMANDER
 v 5 COLLABORATOR
 v 6 COLLABORATOR
 v 7 LOCAL_CONTROLLER
 v 8 FIELD
 v 9 FIELD
-v 10 BOUNDARY
+v 10 BOUNDARY-COMMANDER
 v 11 POOL
 v 12 DATA_PROVIDER
-v 13 INCIDENTAL
+v 13 COLLABORATOR
 v 14 CONSTRUCTOR
-v 15 CONTROLLER
-v 16 INCIDENTAL
+v 15 BOUNDARY-COMMANDER
+v 16 COLLABORATOR
 v 17 DATA_CLASS
 v 18 CONSTRUCTOR
-v 19 LOCAL_CONTROLLER
+v 19 COLLABORATOR
 e 0 1 call
 e 0 2 implement
 e 0 3 declare
 e 0 4 inherit
-e 0 5 declare
-e 0 6 implement
+e 4 5 declare
+e 5 6 call
 e 0 7 implement
 e 0 8 declare
 e 0 9 declare
 e 10 2 declare
+e 10 5 declare
 e 11 4 inherit
 e 12 4 declare
 e 5 13 call
 e 5 14 call
 e 6 15 call
-e 6 16 call
+e 15 16 declare
 e 17 15 call
 e 16 18 call
-e 16 19 call
+e 16 19 declare
 1
