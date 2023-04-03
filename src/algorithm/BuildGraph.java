@@ -81,7 +81,7 @@ public class BuildGraph {
    *
    * @return 目标图
    */
-  public ArrayList<Graph> buildTargetGraph(int p, int s) {
+  public ArrayList<Graph> buildTargetGraph(String p, String s) {
     ArrayList<Graph> graphs = new ArrayList<>();
     InputStream is = this.getClass().getResourceAsStream("/test/" + p + "/" + s + ".txt");
     if (is == null) {

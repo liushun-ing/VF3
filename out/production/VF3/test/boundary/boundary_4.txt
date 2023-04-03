@@ -1,0 +1,131 @@
+t-0-0
+v 0 BOUNDARY
+v 1 DATA_CLASS
+v 2 COLLABORATOR
+v 3 COLLABORATOR
+v 4 FACTORY
+v 5 SET
+v 6 FIELD
+v 7 BOUNDARY
+v 8 DATA_CLASS
+v 9 COMMAND
+e 0 1 declare
+e 0 2 declare
+e 2 3 declare
+e 3 1 call
+e 0 4 declare
+e 0 5 declare
+e 0 6 declare
+e 7 3 declare
+e 8 4 call
+e 5 9 call
+1
+t-0-1
+v 0 BOUNDARY
+v 1 COLLABORATOR
+v 2 COLLABORATOR
+v 3 ABSTRACT
+v 4 COMMAND
+v 5 SET
+v 6 FIELD
+v 7 BOUNDARY
+v 8 COMMANDER
+v 9 FACTORY
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 call
+e 0 5 declare
+e 0 6 declare
+e 7 3 call
+e 8 4 implement
+e 5 9 call
+1
+t-1-0
+v 0 BOUNDARY
+v 1 COLLABORATOR
+v 2 FACTORY
+v 3 COMMAND
+v 4 EMPTY
+v 5 COLLABORATOR
+v 6 COLLABORATOR
+v 7 POOL
+v 8 COLLABORATOR
+v 9 COMMAND
+e 0 1 call
+e 0 2 inherit
+e 0 3 call
+e 0 4 declare
+e 0 5 declare
+e 0 6 declare
+e 7 3 declare
+e 6 8 call
+e 5 8 call
+e 5 9 call
+1
+t-1-1
+v 0 POOL
+v 1 VOID_ACCESSOR
+v 2 SET
+v 3 SET
+v 4 COLLABORATOR
+v 5 COLLABORATOR
+v 6 FIELD
+v 7 DEGENERATE
+v 8 BOUNDARY
+v 9 COLLABORATOR
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+e 8 5 declare
+e 0 6 declare
+e 7 3 call
+e 8 4 declare
+e 5 9 call
+e 9 8 call
+1
+t-2-0
+v 0 ENTITY
+v 1 DESTRUCTOR
+v 2 COPY_CONSTRUCTOR
+v 3 COLLABORATOR
+v 4 COLLABORATOR
+v 5 PROPERTY
+v 6 FIELD
+v 7 BOUNDARY
+v 8 COLLABORATOR
+v 9 NON_VOID_COMMAND
+e 0 1 call
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+e 0 5 implement
+e 0 6 declare
+e 7 3 declare
+e 7 4 declare
+e 7 8 call
+e 5 9 call
+1
+t-2-1
+v 0 BOUNDARY
+v 1 CONSTRUCTOR
+v 2 NON_VOID_COMMAND
+v 3 COLLABORATOR
+v 4 SET
+v 5 COLLABORATOR
+v 6 FIELD
+v 7 COLLABORATOR
+v 8 CONTROLLER
+v 9 CONTROLLER
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 declare
+e 3 5 declare
+e 0 6 declare
+e 8 4 call
+e 5 7 call
+e 5 8 call
+e 5 9 call
+1

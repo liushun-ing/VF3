@@ -1,0 +1,129 @@
+t-0-0
+v 0 COMMANDER
+v 1 CONTROLLER
+v 2 COLLABORATOR
+v 3 CONTROLLER
+v 4 BOUNDARY-COMMANDER
+v 5 COMMAND-COLLABORATOR
+v 6 ENTITY
+v 7 ENTITY
+v 8 BOUNDARY
+v 9 PROPERTY
+e 0 1 declare
+e 0 2 inherit
+e 0 3 call
+e 0 4 call
+e 4 5 declare
+e 5 6 call
+e 7 3 implement
+e 8 4 implement
+e 5 9 call
+1
+t-0-1
+v 0 CONTROLLER
+v 1 COMMAND-COLLABORATOR
+v 2 SET
+v 3 SET
+v 4 GET
+v 5 COLLABORATOR
+v 6 FIELD
+v 7 FACTORY
+v 8 BOUNDARY
+v 9 GET
+e 0 1 inherit
+e 0 2 declare
+e 0 3 inherit
+e 0 4 declare
+e 1 5 call
+e 0 6 declare
+e 7 3 declare
+e 8 4 call
+e 5 9 call
+1
+t-1-0
+v 0 ENTITY
+v 1 COPY_CONSTRUCTOR
+v 2 COLLABORATOR
+v 3 BOUNDARY-COMMANDER
+v 4 GET
+v 5 GET
+v 6 FIELD
+v 7 COMMAND-COLLABORATOR
+v 8 BOUNDARY
+v 9 COLLABORATOR
+e 0 1 declare
+e 0 2 declare
+e 0 3 declare
+e 0 4 call
+e 0 5 inherit
+e 0 6 declare
+e 3 7 declare
+e 3 9 call
+e 8 4 declare
+e 7 9 call
+1
+t-1-1
+v 0 BOUNDARY-COMMANDER
+v 1 COMMAND-COLLABORATOR
+v 2 COMMAND
+v 3 INCIDENTAL
+v 4 GET
+v 5 COLLABORATOR
+v 6 FIELD
+v 7 BOUNDARY
+v 8 CONTROLLER
+v 9 COLLABORATOR
+e 0 1 declare
+e 0 2 implement
+e 0 3 declare
+e 0 4 declare
+e 1 5 call
+e 5 0 call
+e 1 6 declare
+e 7 3 declare
+e 8 4 declare
+e 5 9 call
+1
+t-2-0
+v 0 BOUNDARY-COMMANDER
+v 1 COMMAND-COLLABORATOR
+v 2 SET
+v 3 COMMAND
+v 4 FACTORY
+v 5 BOUNDARY-COMMANDER
+v 6 FIELD
+v 7 POOL
+v 8 COMMAND
+v 9 COLLABORATOR
+e 0 1 declare
+e 0 2 implement
+e 0 3 call
+e 0 4 inherit
+e 0 5 implement
+e 0 6 declare
+e 7 3 inherit
+e 5 8 declare
+e 8 9 call
+e 0 9 call
+1
+t-2-1
+v 0 ENTITY
+v 1 COLLABORATOR
+v 2 COMMAND
+v 3 BOUNDARY-COMMANDER
+v 4 COMMAND-COLLABORATOR
+v 5 DESTRUCTOR
+v 6 FIELD
+v 7 COLLABORATOR
+v 8 ENTITY
+v 9 COLLABORATOR
+e 0 1 call
+e 0 2 declare
+e 0 3 declare
+e 3 4 declare
+e 0 5 inherit
+e 0 6 declare
+e 7 4 call
+e 8 4 declare
+e 4 9 declare
+1
