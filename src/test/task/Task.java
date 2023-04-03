@@ -5,12 +5,15 @@ import algorithm.MainEntry;
 import algorithm.Solution;
 import graph.Graph;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Task {
   public static void main(String[] args) {
 //    correctnessTest();
-    boundaryTest();
+//    boundaryTest();
+    efficiencyTest();
   }
 
   /**
@@ -36,5 +39,22 @@ public class Task {
       System.out.println(executeResult);
     }
   }
+
+  /**
+   * 效率测试
+   */
+  public static void efficiencyTest() {
+    MainEntry mainEntry = new MainEntry();
+    ArrayList<Graph> targetGraph = new BuildGraph().buildTargetGraph("24", "5");
+    long t = 0;
+    for (Graph g : targetGraph) {
+      long begin = new Date().getTime();
+      ArrayList<ArrayList<Solution>> executeResult = mainEntry.executeById(g, 23);
+      long end = new Date().getTime();
+      t += (end - begin);
+    }
+    System.out.println(t);
+  }
+
 
 }
