@@ -45,13 +45,15 @@ public class Task {
    */
   public static void efficiencyTest() {
     MainEntry mainEntry = new MainEntry();
-    ArrayList<Graph> targetGraph = new BuildGraph().buildTargetGraph("24", "5");
+    ArrayList<Graph> targetGraph = new BuildGraph().buildTargetGraph("36", "40");
     long t = 0;
     for (Graph g : targetGraph) {
       long begin = new Date().getTime();
-      ArrayList<ArrayList<Solution>> executeResult = mainEntry.executeById(g, 23);
+//      ArrayList<ArrayList<Solution>> executeResult = mainEntry.executeById(g, 35);
+      ArrayList<ArrayList<Solution>> execute = mainEntry.execute(g);
       long end = new Date().getTime();
       t += (end - begin);
+      System.out.println(end - begin);
     }
     System.out.println(t);
   }
